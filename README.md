@@ -1,20 +1,21 @@
 SiriProxy-SWGDO
 
-About
+About:
 
-SiriProxy-SWGDO is a Siri Proxy plugin that allows you to send commands to XBMC.
+SiriProxy-SWGDO is a Siri Proxy plugin that allows you to send commands to some of our products (the SW-04-010A for example). Although this could be very easily adapted to other interfaces or uses!
 
-SiriProxy-SWGDO was created by brainwave9. You are free to use, modify, and redistribute this gem as long as you give proper credit to the original author.
+Credits:
 
-Credits
+SiriProxy-SWGDO was created by Sparky's Widgets. Please feel free to use this however you wish, just through use a mention and well be happy that we helped!
 
-Usage
+Usage:
+This is still a WIP and usages features/updates documentation will be added here
 
-Installation
+Installation:
 
 To install SiriProxy-SWGDO, add the following to your Siri Proxy config.yml file (~/.siriproxy/config.yml):
 - name: 'SWGDO'
-  git: 'git://github.com/brainwave9/SiriProxy-XBMC.git'
+  git: 'git://github.com/SparkysWidgets/SiriProxy-SWGDO.git'
   
 
 1)Stop Siri Proxy (CTRL-C or killall siriproxy)
