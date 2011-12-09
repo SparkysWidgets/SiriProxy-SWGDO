@@ -4,5 +4,5 @@
 NOTICE: Modifying these options in this file has no effect. You must put them in SiriProxy's config.yml!##########################        
 
 
-    - name: 'XBMC'      
-      git: 'git://github.com/brainwave9/SiriProxy-XBMC.git'
+    - name: 'SWGDO'      
+      git: 'git://github.com/SparkysWidgets/SiriProxy-SWGDO.git'
