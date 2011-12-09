@@ -32,11 +32,11 @@ require 'serialport'
 
 class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
   def initialize(config)
-    comport = config["comport"]
-    baudrate = config["baudrate"]
-    databits = config["databits"]
-    stopbits = config["stopbits"]
-    parity = config["parity"]
+    cport = config["comport"]
+    brate = config["baudrate"]
+    dbits = config["databits"]
+    sbits = config["stopbits"]
+    pparity = config["parity"]
   end
 
   listen_for /test bluetooth/i do
@@ -52,7 +52,7 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
       end
        if(response =~ /two/i) #process their response
        say "opening door 2!"
-         sp = SerialPort.new(comport, baudrate, databits, stopbits, parity)
+         sp = SerialPort.new(cport, brate, dbits, sbits, pparity)
 	sp.write "C2"
       end
    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
