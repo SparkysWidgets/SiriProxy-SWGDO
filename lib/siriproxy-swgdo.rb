@@ -25,6 +25,10 @@
 #
 #######
 
+require 'cora'
+require 'siri_objects'
+require 'SerialPort'
+
 class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
   def initialize(config)
     comport = config["comport"]
