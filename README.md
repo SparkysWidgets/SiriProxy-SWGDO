@@ -16,17 +16,11 @@ Installation:
 To install SiriProxy-SWGDO, add the following to your Siri Proxy config.yml file (~/.siriproxy/config.yml):
 
 - name: 'SWGDO'
-
   git: 'git://github.com/SparkysWidgets/SiriProxy-SWGDO.git'
-
   comport: '/dev/rfcomm0'
-
   baudrate: 9600
-
   databits: 8
-
   stopbits: 1
-
   parity: 'SerialPort::NONE'
 
 1)Stop Siri Proxy (CTRL-C or killall siriproxy)
