@@ -38,5 +38,14 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
     say "Sparkys Interface is up and running!"   
 
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-  end  
+  end
+
+  listen_for /open door.*([0-9])/i do |number|
+    say "opening door #{number}" #say something to the user!
+	sp = SerialPort.new(comport, baudrate, databits, stopbits, parity)
+	#sp.write "C#{number}"
+    
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
+  
 end
