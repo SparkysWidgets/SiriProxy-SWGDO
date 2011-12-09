@@ -7,3 +7,8 @@ NOTICE: Modifying these options in this file has no effect. You must put them in
 
     - name: 'SWGDO'      
       git: 'git://github.com/SparkysWidgets/SiriProxy-SWGDO.git'
+      comport: '/dev/rfcomm0'
+      baudrate: 9600
+      databits: 8
+      stopbits: 1
+      parity: 'SerialPort::NONE'
