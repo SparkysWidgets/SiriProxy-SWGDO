@@ -27,6 +27,7 @@
 
 require 'cora'
 require 'siri_objects'
+require 'pp'
 require 'serialport'
 
 class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
