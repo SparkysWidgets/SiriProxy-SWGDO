@@ -52,7 +52,7 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
       end
        if(response =~ /two/i) #process their response
        say "opening door 2!"
-         sp = SerialPort.new(@comport, @baudrate, @databits, @stopbits, @parity)
+         sp = SerialPort.new(/dev/rfcomm0, @baudrate, @databits, @stopbits, @parity)
 	sp.write "C2"
       end
    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
