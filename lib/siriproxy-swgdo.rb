@@ -27,7 +27,7 @@
 
 require 'cora'
 require 'siri_objects'
-require 'SerialPort'
+require 'serialport'
 
 class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
   def initialize(config)
