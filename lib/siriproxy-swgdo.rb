@@ -27,7 +27,11 @@
 
 class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
   def initialize(config)
-
+    comport = config["comport"]
+    baudrate = config["combaud"]
+    databits = config["comdbits"]
+    stopbits = config["comsbits"]
+    parity = config["SerialPort::NONE"]
   end
 
   listen_for /test bluetooth/i do
