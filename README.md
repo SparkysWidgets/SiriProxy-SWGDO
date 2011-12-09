@@ -14,6 +14,7 @@ This is still a WIP and usages features/updates documentation will be added here
 Installation:
 
 To install SiriProxy-SWGDO, add the following to your Siri Proxy config.yml file (~/.siriproxy/config.yml):
+
 - name: 'SWGDO'
   git: 'git://github.com/SparkysWidgets/SiriProxy-SWGDO.git'
   
