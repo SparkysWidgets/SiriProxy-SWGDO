@@ -44,7 +44,7 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 
-  listen_for /open door number ([0-9])/i do |number|
+  listen_for /open door number ([0-9,]*[0-9])/i do |number|
     say "opening door #{number}" #say something to the user!
 	sp = SerialPort.new(comport, baudrate, databits, stopbits, parity)
 	#sp.write "C#{number}"
