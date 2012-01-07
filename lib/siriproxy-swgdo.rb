@@ -45,15 +45,15 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 
- listen_for(/open garage door.*([0-9]+\s*|one|two|three|four|five|six|seven|eight|nine|ten)/i) { |number| open_garage_door(number) }
+ listen_for(/open (garage)? door.*([0-9]+\s*|one|two|three|four|five|six|seven|eight|nine|ten)/i) { |number| open_garage_door(number) }
 
   def open_garage_door(number)
     say "Please wait while I open door #{number}!"
      sp = SerialPort.new(@comport, @baudrate, @databits, @stopbits, @parity)
-      if number = 1 #process their response
+      if number = one #process their response
         say "opening door 1!"
 	#sp.write "C1"
-      elsif number = 02 #process their response
+      elsif number = two #process their response
         say "opening door 2!"
 	#sp.write "C2"
       end
