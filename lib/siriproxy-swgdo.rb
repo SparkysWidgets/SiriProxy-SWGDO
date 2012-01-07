@@ -47,10 +47,10 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
 
  listen_for /open garage door ([0-9,]*[0-9])/i do |number|
      sp = SerialPort.new(@comport, @baudrate, @databits, @stopbits, @parity)
-      if(number =~ 01) #process their response
+      if(number = 1) #process their response
         say "opening door 1!"
 	#sp.write "C1"
-      elsif(number =~ 02) #process their response
+      elsif(number = 2) #process their response
         say "opening door 2!"
 	#sp.write "C2"
       end
