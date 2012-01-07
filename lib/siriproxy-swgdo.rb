@@ -45,7 +45,7 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 
- listen_for(/open (garage)? door.*([0-9]+\s*|one|two|three|four|five|six|seven|eight|nine|ten)/i) { |number| open_garage_door(number) }
+ listen_for(/open garage door.*([0-9]+\s*|one|two|three|four|five|six|seven|eight|nine|ten)/i) { |number| open_garage_door(number) }
 
   def open_garage_door(number)
     say "Please wait while I open door #{number}!"
