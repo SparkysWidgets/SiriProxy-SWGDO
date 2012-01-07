@@ -51,10 +51,10 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
     say "Please wait while I open door #{number}!"
      sp = SerialPort.new(@comport, @baudrate, @databits, @stopbits, @parity)
      tmp = $1.to_i
-      if tmp = 1 #process their response
+      if(tmp = 1) #process their response
         say "opening door 1!"
 	#sp.write "C1"
-      elsif tmp = 2 #process their response
+      elsif(tmp = 2) #process their response
         say "opening door 2!"
 	#sp.write "C2"
       end
