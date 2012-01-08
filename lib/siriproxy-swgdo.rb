@@ -50,12 +50,12 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
   def open_garage_door(number)
     say "Please wait while I open door #{number}!"
      sp = SerialPort.new(@comport, @baudrate, @databits, @stopbits, @parity)
-     $tmp = number.to_i
+     $tmp = number
    case $tmp
-    when 1
+    when "one"
 	say "opening door 1!"
  	#sp.write "C1"
-    when 2
+    when "two"
 	say "opening door 2!"
 	#sp.write "C2"
     else
