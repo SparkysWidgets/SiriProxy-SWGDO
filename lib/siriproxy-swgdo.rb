@@ -54,10 +54,10 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
    case $tmp
     when "one"
 	say "opening door 1!"
- 	#sp.write "C1"
+ 	sp.write "C1"
     when "two"
 	say "opening door 2!"
-	#sp.write "C2"
+	sp.write "C2"
     else
 	#do nothing
     end
