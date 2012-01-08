@@ -54,7 +54,8 @@ class SiriProxy::Plugin::SWGDO < SiriProxy::Plugin
       if(tmp = 1) #process their response
         say "opening door 1!"
 	#sp.write "C1"
-      elsif(tmp = 2) #process their response
+	end
+      if(tmp = 2) #process their response
         say "opening door 2!"
 	#sp.write "C2"
       end
