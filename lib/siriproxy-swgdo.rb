@@ -71,10 +71,10 @@ listen_for(/close garage door.*([0-9]+\s*|one|two|three|four|five|six|seven|eigh
      $tmp = number
    case $tmp
     when "one"
-	say "opening door 1!"
+	say "closing door 1!"
  	sp.write "C1"
     when "two"
-	say "opening door 2!"
+	say "closing door 2!"
 	sp.write "C2"
     else
 	#do nothing
